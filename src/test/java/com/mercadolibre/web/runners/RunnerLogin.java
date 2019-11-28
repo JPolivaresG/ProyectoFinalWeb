@@ -8,7 +8,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 
-@CucumberOptions(features="src/test/resources/features/LoginMercado.feature", glue= {"com.mercadolibre.web"},tags = "@tag2")
+@CucumberOptions(features="src/test/resources/features/LoginMercado.feature", glue= {"com.mercadolibre.web"})//,tags = "@tag2")
 public class RunnerLogin {
 
 }

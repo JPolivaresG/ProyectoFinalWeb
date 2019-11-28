@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ingreso y validacion de mercadolibre" skipped="0" tests="1" time="22.52" timestamp="2019-11-25 12:07:09"><testcase name="R1"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ingreso y validacion de mercadolibre" skipped="0" tests="2" time="84.76" timestamp="2019-11-27 08:09:32"><testcase name="R1"/><testcase name="R2"/></testsuite>

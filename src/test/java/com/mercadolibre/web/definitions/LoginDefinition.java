@@ -14,8 +14,9 @@ public class LoginDefinition {
 	LoginSteps loginSteps;
 	
 	@Given("^Ingreso al navegador$")
-	public void ingreso_al_navegador() {
+	public void ingreso_al_navegador() throws InterruptedException {
 		loginSteps.ingreso_al_Navegador();
+		loginSteps.seleccion_Pais();
 
 	}
 
@@ -25,18 +26,20 @@ public class LoginDefinition {
 
 	}
 
-	@Then("^Valida el ingreso exitoso$")
-	public void valida_el_ingreso_exitoso() {
-		loginSteps.validacion_Ingreso();
+	@Then("^Valida el ingreso exitoso \"([^\"]*)\"$")
+	public void valida_el_ingreso_exitoso(String user) {
+		loginSteps.validacion_Ingreso(user);
 	}
 
 	@When("^Busqueda de adulto\"([^\"]*)\"$")
-	public void busqueda_de_adulto(String busqueda) {
+	public void busqueda_de_adulto(String busqueda) throws InterruptedException {
+		loginSteps.busqueda_Adultos(busqueda);
 
 	}
 
 	@Then("^Valida el mensaje de advertencia$")
-	public void valida_el_mensaje_de_advertencia() {
+	public void valida_el_mensaje_de_advertencia() throws InterruptedException {
+		loginSteps.valida_el_Mensaje();
 
 	}
 

@@ -8,7 +8,7 @@ Feature: Ingreso y validacion de mercadolibre
   Scenario Outline: R1
     Given Ingreso al navegador
     When Ingreso a la web con usuario <user> y contrasena <password>
-    Then Valida el ingreso exitoso
+    Then Valida el ingreso exitoso <user>
         Examples: 
       | user | password |
       | "Caroo150@hotmail.com" | "1813180" |
@@ -16,9 +16,7 @@ Feature: Ingreso y validacion de mercadolibre
   @tag3
   Scenario Outline: R2
     Given Ingreso al navegador
-    When Ingreso a la web con usuario <user> y contrasena <password>
-    And  Busqueda de adulto<busqueda>
-    Then Valida el mensaje de advertencia
+    When Busqueda de adulto<busqueda>
     Examples: 
-      | user | password | busqueda |
-      | "Caroo150" | "1813180" | "huevo vibrador"|
+      | busqueda |
+    | "huevo vibradora"|
